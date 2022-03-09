@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+let c1=600, c2= 400, c3=200;
+let a=prompt('Nhập số phút đã gọi: ')
+    if (a>0&&a<50||a==50){
+        alert('Sô tiền cần trả: ' +(a*c1));
+    }else if(a>50 && a<150||a==150){
+        alert('Số tiền cần trả: ' +((50*c1)+((a-50)*c2)));
+    } else {
+        alert('Số tiền cần trả: '+((50*c1)+(100*c2)+((a-150)*c3)));
+    }
+</script>
+</body>
+</html>

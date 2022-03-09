@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let a = prompt('Nhập số tiền gửi: ');
+    let b = prompt('Nhập thời gian muốn gửi (tháng): ');
+    let total = a;
+    let total2 = "";
+    let i = 1;
+    if (isNaN(a) || a < 0 || b < 0 || a == 0) {
+        alert('Nhập lại số tiền');
+    } else {
+        for (; i <= b; i++) {
+            total = total * 1.00059;
+            total2 += "Tháng " + i + " gốc + lãi = " + total.toLocaleString() + " VNđ <br>";
+        }
+        document.write(total2);
+    } //ggggggg
+</script>
+</body>
+</html>

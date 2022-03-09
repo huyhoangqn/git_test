@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let a = prompt('Nhập số điện: ');
+    let bac1 = 1678, bac2 = 1734, bac3 = 2014, bac4 = 2536;
+    if (a > 0 && a < 50 || a==50) {
+        alert('Tiền điện là: ' + (a * bac1));
+    } else if (a > 50 && a < 100 || a==100) {
+        alert('Tiền điện là: ' + ((bac1 * 50) + (a - 50) * bac2));
+    } else if (a > 100 && a < 200 ||a==200) {
+        alert('Tiền điện là: ' + ((bac1 * 50) + (bac2 * 50) + (a - 100) * bac3));
+    } else {
+        alert('Tiền điện là: ' + (bac1 * 50) + (bac2 * 50) + (bac3 * 100) + (a - 200) * bac4);
+    }
+</script>
+</body>
+</html>

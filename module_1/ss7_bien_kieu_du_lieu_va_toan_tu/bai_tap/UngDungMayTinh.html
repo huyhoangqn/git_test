@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<table>
+    <tr>
+        <td>
+            <input type="text" id="box1">
+            <input type="text" id="box2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="cal1()">Addition(+)</button>
+            <button onclick="cal2()">Subtraction(-)</button>
+            <button onclick="cal3()">Multiplication(X)</button>
+            <button onclick="cal4()">Division(/)</button>
+        </td>
+    </tr>
+</table>
+<p id="output"></p>
+<script>
+    function cal1() {
+        let In1 = document.getElementById('box1').value;
+        let In2 = document.getElementById('box2').value;
+        I1 = parseInt(In1);
+        I2 = parseInt(In2);
+        document.getElementById('output').innerHTML = "Result: " + (I1 + I2);
+    }
+
+    function cal2() {
+        let In1 = document.getElementById('box1').value;
+        let In2 = document.getElementById('box2').value;
+        I1 = parseInt(In1);
+        I2 = parseInt(In2);
+        document.getElementById('output').innerHTML = "Result: " + (I1 - I2);
+    }
+
+    function cal3() {
+        let In1 = document.getElementById('box1').value;
+        let In2 = document.getElementById('box2').value;
+        I1 = parseInt(In1);
+        I2 = parseInt(In2);
+        document.getElementById('output').innerHTML = "Result: " + (I1 * I2);
+    }
+
+    function cal4() {
+        let In1 = document.getElementById('box1').value;
+        let In2 = document.getElementById('box2').value;
+        I1 = parseInt(In1);
+        I2 = parseInt(In2);
+        document.getElementById('output').innerHTML = "Result: " + ((I1 / I2)).toFixed(2);
+    }
+</script>
+</body>
+</html>

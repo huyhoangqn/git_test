@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập tháng:</td>
+    </tr>
+    <tr>
+        <td><input type="text" , id="box"></td>
+        <td>
+            <button onclick="cal()">Số ngày</button>
+        </td>
+    </tr>
+</table>
+<p id="in"></p>
+<script !src="">
+    function cal() {
+        let a = parseInt(document.getElementById('box').value);
+        switch (a) {
+            case 2:
+                document.getElementById('in').innerHTML = 'Tháng 2 có 28 hoặc 29 ngày';
+                break;
+            case 1:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+                document.getElementById('in').innerHTML = 'Tháng ' + a + ' có 30 ngày';
+                break;
+        }
+    }
+</script>
+</body>
+</html>

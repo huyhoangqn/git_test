@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .table{
+            width: 600px;
+            text-align: center;
+        }
+        .button{
+            background-color: dodgerblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text", id="input"></td>
+            <td>
+                <select name="from" id="from">
+                    <option value="vn" id="vn">VietNamDong</option>
+                    <option value="usd" id="usd">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="to" id="to">
+                    <option value="usd" id="usd">USD</option>
+                    <option value="vn" id="vn">VietNamDong</option>
+                </select>
+            </td>
+            <td>
+                <button class="button" onclick="doitien()">Covert</button>
+            </td>
+        </tr>
+    </table>
+<p id="output"></p>
+    <script>
+        function doitien() {
+            let Input = document.getElementById('input').value;
+            let From = document.getElementById('from').value;
+            let To = document.getElementById('to').value;
+            if (From==To){
+                document.getElementById('output').innerHTML ="Result: " + Input
+            }
+           if (From=="vn" && To=="usd"){
+                document.getElementById('output').innerHTML ="Result: " + Input/22840;
+            }
+           if (From=="usd" && To=="vn"){
+               document.getElementById('output').innerHTML ="Result: " + Input*22840;
+           }
+        }
+    </script>
+
+
+</body>
+</html>

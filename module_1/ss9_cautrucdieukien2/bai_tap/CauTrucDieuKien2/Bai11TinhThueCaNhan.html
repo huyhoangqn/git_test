@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let bac2 = 0.05, bac3 = 0.1, bac4 = 0.15, bac5 = 0.2;
+    let a = prompt('Nhập thu nhập của bạn: ');
+    if (isNaN(a) || a < 0) {
+        alert('Nhập lại.');
+    } else if (a < 4 || a == 4) {
+        alert('Bạn không cần đóng thuế');
+    } else if (a > 4 && a < 6 || a == 6) {
+        alert('Bạn phải đóng thuế 5% tương đương: ' + (5 * bac2));
+    } else if (a > 6 && a < 9 || a == 9) {
+        alert('Bạn phải đóng thuế 10% tương đương: ' + (5 * bac3));
+    } else if (a > 9 && a < 14 || a == 14) {
+        alert('Bạn phải đóng thuế 15% tương đương: ' + (5 * bac4));
+    } else {
+        alert('Bạn phải đóng thuế 20% tương đương: ' + (5 * bac5));
+    }
+
+</script>
+</body>
+</html>

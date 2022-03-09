@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let a = parseInt(prompt('Nhập điểm bài tập: '));
+    let b = parseInt(prompt('Nhập điểm giữa kỳ: '));
+    let c = parseInt(prompt('Nhập điểm cuối kỳ: '));
+    let g = (a + b + c) / 3
+    if (g < 45) {
+        alert('Học lực yếu');
+    } else if (g > 45 && g < 65) {
+        alert('Học lực trung trình');
+    } else if (g > 65 && g < 80) {
+        alert("Học lưc khá");
+    } else {
+        alert('Học lực giỏi');
+    }
+</script>
+</body>
+</html>

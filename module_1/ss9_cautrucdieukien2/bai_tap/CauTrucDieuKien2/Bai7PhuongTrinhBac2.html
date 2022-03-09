@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let a = prompt('Nhập số a: ');
+    let b = prompt('Nhập số b: ');
+    let c = prompt('Nhập số c: ');
+    let denta = b * b - 4 * a * c;
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("Nhập lại.")
+    } else if (denta < 0) {
+        alert('Phương trình vô nghiệm.');
+    } else if (denta > 0) {
+        alert('x1 = ' + ((-b + Math.sqrt(denta))) / (2 * a) + '     x2 = ' + ((-b - Math.sqrt(denta))) / (2 * a));
+    } else {
+        alert('x1 = x2' + (-b) / (2 * a));
+    }
+</script>
+</body>
+</html>

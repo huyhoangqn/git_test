@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vatly, hoahoc, sinhhoc;
+    vatly = prompt("Nhập điểm Vật lý:");
+    hoahoc = prompt("Nhập điểm Hóa học:");
+    sinhhoc = prompt("Nhập điểm Sinh học:");
+
+    let v = parseInt(vatly);
+    let h = parseInt(hoahoc);
+    let s = parseInt(sinhhoc);
+
+    let E = ((v + h + s) / 3).toFixed(2);
+    document.writeln("Điểm trung bình ba môn là:" + E)
+</script>
+</body>
+</html>

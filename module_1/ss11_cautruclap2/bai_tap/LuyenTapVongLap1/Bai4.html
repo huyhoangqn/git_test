@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let n = 20;
+    let fn, fn1 = 1, fn2 = 1;
+    for (let i = 1; i <= n; i++) {
+        fn = fn1 + fn2;
+        if (fn % 5 == 0) {
+            document.write(fn + "<br>");
+            break;
+        } else {
+            fn1 = fn2;
+            fn2 = fn;
+        }
+    }
+</script>
+</body>
+</html>

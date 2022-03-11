@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let n = prompt('Bạn muốn hiện bao nhiêu số Fibonaci');
+    var fn = 0;
+    var fn1 = 1;
+    var fn2 = 1;
+    for (let i = 1; i <= n; i++) {
+        fn = fn1 + fn2;
+        document.write(fn + "<br>");
+        fn1 = fn2;
+        fn2 = fn;
+    }
+</script>
+</body>
+</html>

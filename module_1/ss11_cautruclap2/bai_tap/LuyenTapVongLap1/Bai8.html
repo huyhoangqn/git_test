@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="play()">Bắt đầu trò chơi</button>
+<script>
+    function play() {
+        for (; ;) {
+            let number1 = parseInt(prompt("Nhập vào số nhỏ nhất. "))
+            let number2 = parseInt(prompt("Nhập vào số lớn nhất. "))
+            let number3 = parseInt(prompt("Nhập vào số muốn đoán trong khoảng. " + number1 + " đến " + number2))
+            let random = Math.floor((Math.random() *  (number2 - number1 ) ) +  number1 );
+            if (number3 == random) {
+                alert("Chúc mừng, số ngẫu nhiên là " + random);
+                let question = confirm("Bạn có muốn tiếp tục không?");
+                if (question == false) {
+                    break;
+                }
+            } else {
+                alert("Chọn sai. " + random);
+                let question = confirm("Bạn có muốn tiếp tục không?");
+                if (question == false) {
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhập số các nguyên tố ');
+    let dem = 0;
+
+    function play(b) {
+        if (b == 2) {
+            return true;
+        } else if (b < 2) {
+            return false;
+        } else if (b % 2 == 0) {
+            return false;
+        } else {
+            for (let i = 3; i <= Math.sqrt(b); i = i + 1) {
+                if (b % i == 0) {
+                    return false;
+                    break;
+                }
+            }
+        }
+        return true;
+    }
+
+    let Count = 2;
+    while (dem < n ) {
+        if (play(Count)) {
+            dem++;
+            document.write(Count + " ");
+        }Count++;
+    }
+</script>
+</body>
+</html>

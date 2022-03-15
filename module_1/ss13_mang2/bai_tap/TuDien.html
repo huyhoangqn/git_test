@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    let search = prompt("Nhập từ khoá cần tìm");
+    let  english = ["Hello","Bye","Four","Five","Love"];
+    let tv =["Xin chào","Tạm biệt","Bốn","Năm","Yêu"];
+    // let index = -1 ;
+    for(let i = 0 ; i < english.length ; i++){
+        if(english[i] == search) {
+            index = i;
+        }
+    } if( index != -1){
+        alert(tv[index])
+    }else {
+        alert("Không tìm thấy")
+    }
+</script>
+</body>
+</html>

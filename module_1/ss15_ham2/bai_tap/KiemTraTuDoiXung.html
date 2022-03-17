@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    function kt(s) {
+        let q = s.split('').reverse().join('');
+        return q;
+    }
+
+    let s = prompt('Nhập từ cần kiểm tra');
+    if (!isNaN(s)) alert('Vui lòng nhập chuỗi');
+    else if (kt(s) === s) {
+        document.write(s + ' là từ đối xứng');
+    } else {
+        document.write(s + ' không phải là từ đối xứng');
+    }
+
+</script>
+</body>
+</html>

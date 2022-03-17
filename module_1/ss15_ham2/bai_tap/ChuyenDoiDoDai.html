@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Input: <input type="text" id="input">
+<button onclick="convert1()">Convert to feet</button>
+<button onclick="convert2()">Convert to meter</button>
+<p id="hh"></p>
+<script>
+    function convert1() {
+        let a = 0.305 * document.getElementById('input').value;
+        document.getElementById('hh').innerHTML = 'Kết quả: ' + a + ' feet';
+    }
+
+    function convert2() {
+        let a = 3.279 * document.getElementById('input').value;
+        document.getElementById('hh').innerHTML = 'Kết quả: ' + a + ' meter';
+    }
+</script>
+</body>
+</html>

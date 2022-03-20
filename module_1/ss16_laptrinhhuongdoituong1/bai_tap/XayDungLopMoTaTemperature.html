@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    class Temp {
+        constructor(c) {
+            this.c = c;
+        }
+
+        getCtoF() {
+            return this.c + ' độ C ' + ' tương đương ' + (this.c * 33.8).toFixed(2) + ' độ F'
+        }
+
+        getCtoK() {
+            return this.c + ' độ C ' + ' tương đương ' + (this.c + 273.15).toFixed(2) + ' độ K'
+        }
+    }
+
+    let a = new Temp(25);
+    let b = a.getCtoF()
+    let c = a.getCtoK()
+    document.write(b + "<br>" + c);
+</script>
+</body>
+</html>

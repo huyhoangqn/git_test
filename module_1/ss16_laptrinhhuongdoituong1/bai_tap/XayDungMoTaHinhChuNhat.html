@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="draw" width="400" height="300"></canvas>
+<script !src="">
+    class Rectang {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getArea() {
+            return 'Area: ' + this.width * this.height + ' ';
+        }
+
+        getPerimeter() {
+            return 'Perimeter: ' + (this.height + this.width) * 2;
+        }
+
+        getDraw(recobj) {
+            window.onload = draw;
+
+            function draw() {
+                var index = document.getElementById('draw');
+                var ctx = index.getContext('2d');
+                ctx.fillStyle = "rgb(0,200,0)";
+                ctx.fillRect(40, 100, recobj.width, recobj.height);
+            }
+        }
+    }
+
+    let REC = new Rectang(600, 200);
+    let outputA = REC.getArea();
+    document.write(outputA);
+    let outputP = REC.getPerimeter()
+    document.write(outputP);
+    REC.getDraw(REC);
+
+
+</script>
+</body>
+</html>

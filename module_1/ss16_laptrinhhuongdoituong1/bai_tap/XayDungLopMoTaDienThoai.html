@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="phone.poweron()"> Turn on device</button>
+<button onclick="phone.poweroff()"> Turn off device</button>
+<button onclick="phone.turnonoff()">Check turn on or off</button>
+<button onclick="phone.message()">Create a message</button>
+<button onclick="phone.sentmes()">Sent messages</button>
+<button onclick="phone.usephone()">Pin tatus</button>
+<script>
+    class mobile {
+        constructor(pin, memo1, memo2, memo3) {
+            this.pin = pin;
+            this.memo1 = memo1;
+            this.memo2 = memo2;
+            this.memo3 = memo3;
+        }
+
+        poweron() {
+            alert('this device is on');
+        }
+
+        poweroff() {
+            alert('this device is off');
+        }
+
+        turnonoff() {
+            if (this.pin > 0) {
+                alert('the phone is on');
+            } else {
+                alert('the phone is off');
+            }
+            alert('pin còn lại: ' + --this.pin)
+        }
+
+
+        charge() {
+            alert(this.pin++);
+        }
+
+        message() {
+            prompt('enter something');
+            alert('pin còn lại: ' + --this.pin);
+        }
+
+        sentmes() {
+            alert('sent a message');
+            alert('pin còn lại: ' + --this.pin);
+        }
+
+        usephone() {
+            alert('pin còn: '+this.pin);
+        }
+
+    }
+
+    let phone = new mobile(100, 1024, 1024, 1024);
+
+</script>
+</body>
+</html>

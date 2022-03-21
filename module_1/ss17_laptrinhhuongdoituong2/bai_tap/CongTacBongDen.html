@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Congtac {
+        connectToLamp() {
+            if (this.status == true) {
+                alert("Connected!");
+            } else {
+                alert("Not Connected!");
+            }
+        };
+
+        switchOn() {
+            this.status = true;
+            alert("Công tắc bật");
+        };
+
+        switchOff() {
+            this.status = false;
+            alert("Công tắc tắt");
+        }
+    }
+
+    class Bongden {
+        turnOns() {
+            alert("Đèn bật");
+        };
+
+        turnOffs() {
+            alert("Đèn tắt");
+        }
+    }
+
+    let congtac = new Congtac();
+    let bongden = new Bongden();
+    bongden(congtac);
+
+    function on() {
+        bongden.turnOns(congtac.switchOn());
+    }
+
+    function off() {
+        bongden.turnOffs(congtac.switchOff());
+    }
+
+    function connection() {
+        congtac.connectToLamp();
+    }
+</script>
+<button type="button" onclick="on()">TURN ON</button>
+<button type="button" onclick="off()">TURN OFF</button>
+<button type="button" onclick="connection()">CONNECTION</button>
+</body>
+</html>
+
+
+

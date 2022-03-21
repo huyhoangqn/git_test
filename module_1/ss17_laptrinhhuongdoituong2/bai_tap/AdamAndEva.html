@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(piece) {
+            this.piece = piece;
+        }
+
+        getPiece() {
+            return this.piece;
+        }
+
+        decreasePiece() {
+            if (this.piece > 0) {
+                return this.piece--;
+            } else {
+                return this.piece = 0;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, say, gender, weight) {
+            this.name = name;
+            this.say = say;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setApple(apple) {
+            this.apple = apple;
+        }
+
+        getAppleInf() {
+            return this.apple.getPiece();
+        }
+
+        biteShot() {
+            if (this.status) {
+                this.weight++;
+                document.write(this.name + this.say + '<br>');
+            }
+        }
+
+        oneShot() {
+            this.status = true;
+            return this.apple.decreasePiece();
+        }
+    }
+
+    let adam = new Human('Adam', ' say "my turn"', 'Male', 50);
+    let eva = new Human('Eva', ' say "give me"', 'Femal', 45);
+    let apple = new Apple(10);
+    adam.setApple(apple);
+    eva.setApple(apple);
+
+    for (let i = 0; i < 5; i++) {
+        eva.oneShot();
+        eva.biteShot();
+        document.write('Eva ate 1 piece. The remain of the apple: ' + eva.getAppleInf() + '. ' + 'Weight of Eva: ' + eva.getWeight() + '<br>');
+        adam.oneShot();
+        adam.biteShot();
+        document.write('Adam ate 1 piece. The remain of the apple: ' + adam.getAppleInf() + '. ' + 'Weight of Eva: ' + adam.getWeight() + '<br>');
+    }
+</script>
+</body>
+</html>
